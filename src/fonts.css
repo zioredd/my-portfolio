@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Valencia";
+  src: url("../public/Valencia.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Antonia H1";
+  src: url("../public/AntoniaH1-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir Heavy";
+  src: url("../public/Avenir Heavy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "impact";
+  src: url("../public/impact.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Creattion Demo";
+  src: url("../public/Creattion Demo.otf") format("truetype");
+}

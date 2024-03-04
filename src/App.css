@@ -1,0 +1,121 @@
+/* bebas: ["BebasNeue-Regular", "sans-serif"],
+montserat: ["Montserrat", "sans-serif"],
+druk: ["DrukText-Bold-Trial", "sans-serif"],
+nunito: ["Nunito", "sans-serif"],
+major: ["Major Mono Display", "monospace"], */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.major-mono {
+  font-family: "Major Mono Display", monospace;
+}
+.druk {
+  font-family: "DrukText-Bold-Trial", sans-serif;
+  font-weight: 400;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.great-vibes {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bodoni-moda {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 100;
+}
+
+.rubik {
+  font-family: "Rubik Lines", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.valencia {
+  font-family: "Valencia";
+}
+
+.hover-zoom {
+  transition: transform 0.7s;
+}
+
+.antonia {
+  font-family: "Antonia H1";
+}
+
+.avenir {
+  font-family: "Avenir Heavy";
+}
+
+.impact {
+  font-family: "impact";
+}
+
+.creattion {
+  font-family: "Creattion Demo";
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+.orangebg {
+  background-color: #cf4c2e;
+}
+
+.orangetx {
+  color: #cf4c2e;
+}
+
+.clip-container {
+  clip-path: inset(25% 0% 45% 0%);
+  /* clip-path: inset(25% 10% 45% 10%); */
+}
+
+.header {
+  translate: 0 40%;
+}
+
+@media (min-width: 640px) {
+  .clip-container {
+    /* clip-path: inset(25% 10% 50% 10%); */
+    clip-path: inset(30% 10% 40% 10%);
+  }
+
+  .header {
+    translate: 0 60%;
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+    translate: 0 50%;
+  }
+}
