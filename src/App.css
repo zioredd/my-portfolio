@@ -103,6 +103,10 @@ body {
   translate: 0 40%;
 }
 
+.line {
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
 @media (min-width: 640px) {
   .clip-container {
     /* clip-path: inset(25% 10% 50% 10%); */

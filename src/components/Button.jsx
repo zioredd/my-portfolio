@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import downright from "../assets/images/down-right.png";
 import goldarrow from "../assets/images/gold-arrow.png";
 

@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-// import Button from "./Button";
 import styles from "./style.module.scss";
 import Nav from "./Nav";
 import Button from "./Button";
+import { ButtonContext } from "../../ButtonContext";
 
 const menu = {
   open: {
@@ -30,23 +30,26 @@ const menu = {
 
 export default function Index() {
   const [isActive, setIsActive] = useState(false);
+  useEffect(() => {}, []);
 
   return (
-    <div className={styles.header}>
-      <motion.div
-        className={styles.menu}
-        variants={menu}
-        animate={isActive ? "open" : "closed"}
-        initial="closed"
-      >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
-      </motion.div>
-      <Button
-        isActive={isActive}
-        toggleMenu={() => {
-          setIsActive(!isActive);
-        }}
-      />
-    </div>
+    <ButtonContext.Provider value={{ isActive, setIsActive }}>
+      <div className={styles.header}>
+        <motion.div
+          className={styles.menu}
+          variants={menu}
+          animate={isActive ? "open" : "closed"}
+          initial="closed"
+        >
+          <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        </motion.div>
+        <Button
+          isActive={isActive}
+          toggleMenu={() => {
+            setIsActive(!isActive);
+          }}
+        />
+      </div>
+    </ButtonContext.Provider>
   );
 }

@@ -23,7 +23,7 @@ const Card = ({ id, img, title, service, year, location }) => {
         <h1 className="" style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}>
           {title}
         </h1>
-        <hr />
+        <div className="line max-w-[90%] mx-auto"></div>
         <div className="flex justify-between">
           <p className="text-[1em] ">{service}</p>
           <p className="text-[1em] ">{year}</p>
@@ -31,16 +31,13 @@ const Card = ({ id, img, title, service, year, location }) => {
       </div>
 
       <div
-        className={`max-w-[90%] mx-auto hidden lg:block  
-      
-        ${isHovered ? "text-[#B0A47F]" : "text-[#00211B]"}`}
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
         onClick={() => history(`/projects/${id}`)}
       >
         <div className="flex justify-between max-w-[80%] mx-auto py-10  ">
           <h1
-            className=" w-[25%]"
+            className=" w-[25%] capitalize"
             style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}
           >
             {title}
@@ -55,7 +52,8 @@ const Card = ({ id, img, title, service, year, location }) => {
             {year}
           </p>
         </div>
-        <hr className="" />
+        {/* <hr className="" /> */}
+        <div className="line max-w-[90%] mx-auto"></div>
       </div>
     </>
   );

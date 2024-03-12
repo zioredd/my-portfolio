@@ -2,9 +2,11 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Preloader from "../components/Preloader";
+import { ButtonContext } from "../ButtonContext";
 
 const Page = ({ title }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const { isActive, setIsActive } = React.useContext(ButtonContext);
 
   useEffect(() => {
     (async () => {
@@ -18,9 +20,16 @@ const Page = ({ title }) => {
       }, 2000);
     })();
   }, []);
+
+  console.log(isActive);
+
   return (
     <AnimatePresence mode="wait">
-      {isLoading && <Preloader title={title} />}
+      {isLoading && (
+        <>
+          <Preloader title={title} />
+        </>
+      )}
     </AnimatePresence>
   );
 };

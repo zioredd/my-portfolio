@@ -15,6 +15,8 @@ import tAm from "./locales/am/transaltion.json";
 import Zior from "./components/DennisHeader";
 import ProjectsData from "./components/ProjectsData";
 import ProjectDataForIndividualWork from "./components/ProjectDataForIndividualWork";
+import ArchieveData from "./components/ArchieveData";
+import Navbar from "./components/NavigationBar/Navbar";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -55,7 +57,8 @@ function App() {
     <>
       <Layout>
         <TranslationContext.Provider value={t}>
-          <Zior changeLang={changeLang} />
+          {/* <Zior changeLang={changeLang} /> */}
+          <Navbar changeLang={changeLang} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -65,6 +68,7 @@ function App() {
               element={<ProjectDataForIndividualWork />}
             />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/archieve" element={<ArchieveData />} />
           </Routes>
         </TranslationContext.Provider>
       </Layout>

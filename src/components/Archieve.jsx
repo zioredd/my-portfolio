@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Card from "../components/Card";
-import Footer from "../components/Footer";
-import Page from "../components/Page";
+import React, { useContext, useEffect, useState } from "react";
+import Page from "./Page";
 import { TranslationContext } from "../App";
-import Button from "../components/Button";
+import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
-const Project = ({ projects }) => {
-  const t = React.useContext(TranslationContext);
+const Archieve = ({ projects }) => {
+  const t = useContext(TranslationContext);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -27,33 +26,19 @@ const Project = ({ projects }) => {
   }, []);
   return (
     <>
-      <Page title={t("work-nav")} />
+      <Page title={t("archieve")} />
 
-      <div className="">
+      <div className="mb-[15rem]">
         <div className="max-w-[80%] mx-auto mb-20 sm:pt-[8rem] md:pt-[10rem] lg:pt-[11rem] pt-[8em] ">
           <h1
             className=" leading-tight antonia text-[#00211B]"
             style={{ fontSize: "clamp(2.8em, 6vw, 7em)" }}
           >
-            {t("worksheader")}
+            {t("archieve")}
           </h1>
         </div>
-        <div className="max-w-[72%] mx-auto justify-between mt-20 hidden lg:flex">
-          <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
-            {t("client")}
-          </p>
-          <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
-            {t("location")}
-          </p>
-          <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
-            {t("service")}
-          </p>
-          <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
-            {t("year")}
-          </p>
-        </div>
-        <div className="line max-w-[90%] mx-auto mt-10 hidden lg:block"></div>
 
+        <hr className="max-w-[90%] mx-auto mt-10 border-t-[0.1em] hidden lg:block" />
         <div
           className={
             isLargeScreen
@@ -71,20 +56,47 @@ const Project = ({ projects }) => {
                 service={project.service}
                 year={project.year}
                 location={project.location}
+                src={project.src}
               />
             );
           })}
         </div>
-        {/* <div className="flex justify-center items-center pb-[5rem] md:pb-[10rem]">
-          <Button path="archieve" text="Archieve" />
-        </div> */}
-        <div className="flex justify-center items-center pb-[5rem] md:pb-[10rem]">
-          <Button path="/archieve" text="Archieve" />
-        </div>
       </div>
+
       <Footer />
     </>
   );
 };
 
-export default Project;
+export default Archieve;
+
+const Card = ({ id, title, src }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
+
+  return (
+    <>
+      <div onMouseEnter={handleHover} onMouseLeave={handleHover}>
+        <div className="flex justify-between max-w-[80%] mx-auto py-10  ">
+          <h1
+            className="capitalize"
+            style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}
+          >
+            {title}
+          </h1>
+
+          <a href={src}>
+            <button className="flex items-center text-center h-full text-[#B0A47F]">
+              See Website
+            </button>
+          </a>
+        </div>
+        {/* <hr className="" /> */}
+        <div className="line max-w-[90%] mx-auto"></div>
+      </div>
+    </>
+  );
+};
