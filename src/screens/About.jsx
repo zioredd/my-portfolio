@@ -30,7 +30,7 @@ const About = () => {
               {t("aboutp")}
             </p>
             <h2
-              className="font-[400] antonia leading-tight  text-center xs:text-left"
+              className="font-[400] antonia leading-tight  text-center xs:text-left capitalize"
               style={{ fontSize: "clamp(1.8em, 4vw, 3em)" }}
             >
               {t("help")}

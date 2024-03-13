@@ -20,7 +20,10 @@ const Card = ({ id, img, title, service, year, location }) => {
         >
           <img src={img} className="w-[80%] mx-auto h-auto" />
         </div>
-        <h1 className="" style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}>
+        <h1
+          className="capitalize"
+          style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}
+        >
           {title}
         </h1>
         <div className="line max-w-[90%] mx-auto"></div>
@@ -34,8 +37,13 @@ const Card = ({ id, img, title, service, year, location }) => {
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
         onClick={() => history(`/projects/${id}`)}
+        className="hidden lg:block"
       >
-        <div className="flex justify-between max-w-[80%] mx-auto py-10  ">
+        <div
+          className={`flex justify-between max-w-[80%] mx-auto py-10  ${
+            isHovered && "text-[#B0A47F]"
+          } `}
+        >
           <h1
             className=" w-[25%] capitalize"
             style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}

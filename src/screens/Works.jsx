@@ -29,7 +29,7 @@ const Project = ({ projects }) => {
     <>
       <Page title={t("work-nav")} />
 
-      <div className="">
+      <div className="bg-[#E9EAEB]">
         <div className="max-w-[80%] mx-auto mb-20 sm:pt-[8rem] md:pt-[10rem] lg:pt-[11rem] pt-[8em] ">
           <h1
             className=" leading-tight antonia text-[#00211B]"
@@ -75,11 +75,8 @@ const Project = ({ projects }) => {
             );
           })}
         </div>
-        {/* <div className="flex justify-center items-center pb-[5rem] md:pb-[10rem]">
-          <Button path="archieve" text="Archieve" />
-        </div> */}
-        <div className="flex justify-center items-center pb-[5rem] md:pb-[10rem]">
-          <Button path="/archieve" text="Archieve" />
+        <div className="flex justify-center items-center pb-[5rem] md:pb-[10rem] mt-[5em]">
+          <Button path="/archieve" text={t("archieve")} />
         </div>
       </div>
       <Footer />

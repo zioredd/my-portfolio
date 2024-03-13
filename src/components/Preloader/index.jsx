@@ -51,7 +51,7 @@ export default function Index({ title }) {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className={styles.introduction}
+      className={`${styles.introduction} z-[3000]`}
     >
       {dimension.width > 0 && (
         <>
@@ -59,7 +59,7 @@ export default function Index({ title }) {
             variants={opacity}
             initial="initial"
             animate="enter"
-            className="antonia font-bold text-[#B0A47F]"
+            className="antonia font-bold text-white capitalize"
           >
             <span></span>
             {words[index]}

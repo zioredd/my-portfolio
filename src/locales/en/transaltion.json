@@ -17,16 +17,17 @@
     "mind":"IN MIND?",
     "menu":"menu",
     "close" : "Close",
-    "codeby":"Code by Zior",
+    "codeby":"Code by Zior",    
+    "version": "Version © 2024",
     "link":"linkedin",
     "fb":"facebook",
     "ig":"instagram",
     "git":"github", 
-    "grace":"grace",
-    "constantin":"constantine",
-    "knudsen":"knudsen",
-    "mella":"mella",
-    "yt":"YouTube",
+    "grace":"BIEBSM",
+    "constantin":"constantine foundation",
+    "knudsen":"tanya knudsen",
+    "mella":"mella marketing",
+    "yt":"YouTube clone",
     "about":"About",
     "aboutp":"I'm a freelance Web developer and began my career in UX/UI design and front-end development in 2018. I later transitioned into the development field, driven by a passion for coding.",
     "help":"i can help you with...",
@@ -91,7 +92,10 @@
     "role" : "Role",
     "loc" : "location",
     "yeargen" : "year",
-    "archieve" : "Archieve"
+    "archieve" : "Archieve",
+    "see-website" : "See Website",
+    "next-project" : "Next Case",
+    "prev-project" : "See Previous Project"
 }
 
 

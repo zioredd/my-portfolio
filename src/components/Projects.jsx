@@ -16,13 +16,13 @@ const Projects = () => {
           <p className="text-[#00211B] font-bold text-[1.5em] mr-auto mb-5 uppercase">
             {t("works")}
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-10 gap-y-20 mt-5 ">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-x-10 gap-y-20 mt-5 ">
+            <Card id="01" image={mella} title={t("mella")} />
             <Card id="02" image={grace} title={t("grace")} />
-            <Card id="04" image={constantineHome} title={t("constantin")} />
             <Card id="03" image={tanya} title={t("knudsen")} />
-            <Card id="04" image={mella} title={t("mella")} />
+            <Card id="04" image={constantineHome} title={t("constantin")} />
           </div>
-          <div className="mb-20">
+          <div className="mb-20 my-[7em]">
             <Button text={t("more-works")} path="projects" />
           </div>
         </div>

@@ -9,7 +9,7 @@ const Clients = () => {
   const t = React.useContext(TranslationContext);
   return (
     <>
-      <div className="flex flex-col items-center  max-w-[80%] md:max-w-[60%] mx-auto mb-[10em] mt-[4em]">
+      <div className="flex flex-col items-center  max-w-[80%] md:max-w-[60%] mx-auto mb-[5em] mt-[4em]">
         <h1
           className="raleway text-[13px] text-[#5C6063] my-[3em] text-center"
           style={{ letterSpacing: "6px" }}
@@ -17,18 +17,18 @@ const Clients = () => {
           {t("brands")}
         </h1>
 
-        <div className="grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 ">
-          <div className=" hover:opacity-[80%] my-auto cursor-pointer">
+        <div className="grid grid-cols-3 md:grid-cols-4">
+          <div className="my-auto cursor-pointer">
             <img src={mellaLogo} className="" />
           </div>
 
-          <div className=" hover:opacity-[80%] cursor-pointer">
+          <div className="cursor-pointer">
             <img src={etstride} className="" />
           </div>
-          <div className="flex hover:opacity-[80%] cursor-pointer">
-            <img src={tanyaLogo} className="p-10 h-full" />
+          <div className="flex cursor-pointer flex justify-center items-center">
+            <img src={tanyaLogo} className="w-1/2 h-1/2" />
           </div>
-          <div className=" hover:opacity-[80%] cursor-pointer">
+          <div className="cursor-pointer">
             <img src={constantinLogo} className="h-full" />
           </div>
         </div>

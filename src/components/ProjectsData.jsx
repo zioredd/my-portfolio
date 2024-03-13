@@ -23,13 +23,6 @@ import ytIphone2 from "../assets/yt/ytIphone2.jpeg";
 import Project from "../screens/Works";
 import { TranslationContext } from "../App";
 
-export const clients = [
-  {
-    id: "client-1",
-    logo: constantinLogo,
-  },
-];
-
 export const useTranslation = () => {
   return React.useContext(TranslationContext);
 };

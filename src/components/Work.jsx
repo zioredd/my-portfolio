@@ -21,13 +21,14 @@ const Work = ({ projects, id }) => {
 
       {/* ****************************************************** */}
 
-      <div className="max-w-[75%] mx-auto mb-10 pt-[8rem] md:pt-[12rem] min-h-[70vh]">
+      <div className="max-w-[80%] mx-auto mb-10 pt-[8rem] md:pt-[12rem] min-h-[70vh] capitalize overflow-hidden">
         <div className="flex space-x-3">
           <p className="druk">{filteredProject.id}</p>
           <h1
             className="druk leading-tight pt-0"
             style={{
-              fontSize: "clamp(3.25em, 6vw, 8em)",
+              // fontSize: "clamp(3.25em, 3vw, 4em)",
+              fontSize: "clamp(2.5em, 6vw, 4em)",
               lineHeight: 1,
             }}
           >
@@ -37,25 +38,27 @@ const Work = ({ projects, id }) => {
 
         <div className="flex flex-col md:flex-row justify-between gap-y-10 mt-10">
           <div className="w-full">
-            <p className="text-[0.9em] text-[#a0a0a1] uppercase">{t("role")}</p>
-            <hr className="my-4 md:my-8 max-w-[80%] border-t-[0.1em]" />
-            <p className="text-[1em] text-[#1c1d20]">
+            <p className="text-[0.8em] text-[#a0a0a1] uppercase">{t("role")}</p>
+            <hr className="my-3 md:my-8 max-w-[80%] border-t-[0.1em]" />
+            <p className="text-[0.9em] text-[#1c1d20]">
               {filteredProject.service}
             </p>
           </div>
           <div className="w-full">
-            <p className="text-[0.9em] text-[#a0a0a1] uppercase">{t("loc")}</p>
-            <hr className="my-4 md:my-8 max-w-[80%] border-t-[0.1em]" />
-            <p className="text-[1em] text-[#1c1d20]">
+            <p className="text-[0.8em] text-[#a0a0a1] uppercase">{t("loc")}</p>
+            <hr className="my-3 md:my-8 max-w-[80%] border-t-[0.1em]" />
+            <p className="text-[0.9em] text-[#1c1d20]">
               {filteredProject.location}
             </p>
           </div>
           <div className="w-full">
-            <p className="text-[0.9em] text-[#a0a0a1] uppercase">
+            <p className="text-[0.8em] text-[#a0a0a1] uppercase">
               {t("yeargen")}
             </p>
-            <hr className="my-4 md:my-8 max-w-[80%] border-t-[0.1em]" />
-            <p className="text-[1em] text-[#1c1d20]">{filteredProject.year}</p>
+            <hr className="my-3 md:my-8 max-w-[80%] border-t-[0.1em]" />
+            <p className="text-[0.9em] text-[#1c1d20]">
+              {filteredProject.year}
+            </p>
           </div>
         </div>
       </div>
@@ -112,8 +115,14 @@ const Work = ({ projects, id }) => {
       <div className="max-w-[80%] mb-[2.5rem] md:mb-[5rem] mx-auto flex justify-end">
         {id < projects.length && (
           <Button
-            text="see next project"
+            text={t("next-project")}
             path={`/projects/0${parseInt(filteredProject.id) + 1}`}
+          />
+        )}
+        {id >= projects.length && (
+          <Button
+            text={t("prev-project")}
+            path={`/projects/0${parseInt(filteredProject.id) - 1}`}
           />
         )}
       </div>

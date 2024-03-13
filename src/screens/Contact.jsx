@@ -114,7 +114,7 @@ const Contact = () => {
       <ToastContainer />
 
       <div className="flex flex-col md:flex-row max-w-[80%] mx-auto absolute inset-0 justify-between items-center">
-        <div className="mt-[7em] space-y-5">
+        <div className="mt-[4em] md:mt-[7em] space-y-5">
           <div className="w-[70px] h-[70px] rounded-full bg-white mx-auto translate-y-1/2 flex justify-center items-center">
             <div className="w-[60px] h-[60px] rounded-full bg-[#00211B] opacity-50 flex justify-center items-center">
               <img src={speectBubble} className="w-[24px] h-auto text-white" />
@@ -130,7 +130,7 @@ const Contact = () => {
           </div>
         </div>
         <div
-          className="max-h-screen mt-[10%] md:mt-[40%] lg:mt-[30%]"
+          className="max-h-screen mt-[5%] md:mt-[40%] lg:mt-[30%]"
           id="brown"
         >
           <div className="max-w-[95%] md:max-w-[80%] mx-auto   md:mx-0 md:ml-auto space-y-20  pb-10">
@@ -265,7 +265,7 @@ const Contact = () => {
                     )}{" "}
                   </div>
                 </section>
-                <div className="mt-6 space-y-5">
+                <div className="mt-6 space-y-6">
                   <p className="">{t("promise")}</p>
                   <div className="mt-6">
                     <Button text={t("send")} path="" />

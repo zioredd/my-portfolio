@@ -1,7 +1,7 @@
 "use client";
 import "./fonts.css";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./screens/Home";
 import About from "./screens/About";
 import React, { useEffect } from "react";
@@ -12,7 +12,6 @@ import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import tEn from "./locales/en/transaltion.json";
 import tAm from "./locales/am/transaltion.json";
-import Zior from "./components/DennisHeader";
 import ProjectsData from "./components/ProjectsData";
 import ProjectDataForIndividualWork from "./components/ProjectDataForIndividualWork";
 import ArchieveData from "./components/ArchieveData";
@@ -47,6 +46,7 @@ export const TranslationContext = React.createContext();
 
 function App() {
   const { t } = useTranslation();
+  const location = useLocation();
 
   useEffect(() => {
     let currentLang = localStorage.getItem("lang");
@@ -57,8 +57,7 @@ function App() {
     <>
       <Layout>
         <TranslationContext.Provider value={t}>
-          {/* <Zior changeLang={changeLang} /> */}
-          <Navbar changeLang={changeLang} />
+          <Navbar changeLang={changeLang} location={location} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

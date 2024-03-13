@@ -15,7 +15,7 @@ const Button = ({ text, path }) => {
         onClick={() => history(path)}
         type="submit"
         value="Send"
-        className={`uppercase h-[3.2em] w-[13em] text-[#00211B] px-1 antolia flex justify-center items-center  transition duration-300 hover:bg-[#00211B] hover:text-white hover:border-none border border-[#B0A47F] border-[2px] rounded-full mt-[5em] ${
+        className={`uppercase h-[3.2em] w-[13em] text-[#00211B] px-1 antolia flex justify-center items-center  transition duration-300 hover:bg-[#00211B] hover:text-white hover:border-none border border-[#B0A47F] border-[2px] rounded-full ${
           btnHovered && "transform scale-y-75"
         }`}
       >

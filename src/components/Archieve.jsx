@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Page from "./Page";
 import { TranslationContext } from "../App";
 import Footer from "./Footer";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Archieve = ({ projects }) => {
   const t = useContext(TranslationContext);
@@ -28,7 +28,7 @@ const Archieve = ({ projects }) => {
     <>
       <Page title={t("archieve")} />
 
-      <div className="mb-[15rem]">
+      <div className="pb-[15rem] bg-[#E9EAEB]">
         <div className="max-w-[80%] mx-auto mb-20 sm:pt-[8rem] md:pt-[10rem] lg:pt-[11rem] pt-[8em] ">
           <h1
             className=" leading-tight antonia text-[#00211B]"
@@ -53,9 +53,6 @@ const Archieve = ({ projects }) => {
                 id={project.id}
                 img={project.img1}
                 title={project.title}
-                service={project.service}
-                year={project.year}
-                location={project.location}
                 src={project.src}
               />
             );
@@ -70,7 +67,8 @@ const Archieve = ({ projects }) => {
 
 export default Archieve;
 
-const Card = ({ id, title, src }) => {
+const Card = ({ id, title, src, img }) => {
+  const t = useContext(TranslationContext);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -79,24 +77,46 @@ const Card = ({ id, title, src }) => {
 
   return (
     <>
-      <div onMouseEnter={handleHover} onMouseLeave={handleHover}>
-        <div className="flex justify-between max-w-[80%] mx-auto py-10  ">
+      <Link to={src}>
+        <div
+          onMouseEnter={handleHover}
+          onMouseLeave={handleHover}
+          className={`${isHovered && "text-[#B0A47F]"} hidden lg:block`}
+        >
+          <div className="flex justify-between max-w-[80%] mx-auto py-10  ">
+            <h1
+              className="capitalize"
+              style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}
+            >
+              {title}
+            </h1>
+            <button className="flex items-center text-center h-full">
+              {t("see-website")}
+            </button>
+          </div>
+          <div className="line max-w-[90%] mx-auto"></div>
+        </div>
+        <div
+          className="space-y-3 lg:hidden"
+          onClick={() => history(`/projects/${id}`)}
+        >
+          <div
+            className={`bg-[#00211B] min-h-[20rem] flex justify-center items-center`}
+          >
+            <img src={img} className="w-[80%] mx-auto h-auto" />
+          </div>
           <h1
             className="capitalize"
             style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}
           >
             {title}
           </h1>
-
-          <a href={src}>
-            <button className="flex items-center text-center h-full text-[#B0A47F]">
-              See Website
-            </button>
-          </a>
+          <div className="line max-w-[90%]"></div>
+          <div className="">
+            <p className="text-[1em] ">{t("see-website")}</p>
+          </div>
         </div>
-        {/* <hr className="" /> */}
-        <div className="line max-w-[90%] mx-auto"></div>
-      </div>
+      </Link>
     </>
   );
 };
