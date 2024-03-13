@@ -42,6 +42,7 @@ const ProjectDataForIndividualWork = () => {
   const projects = [
     {
       id: "01",
+      src: "https://mellamarketing.netlify.app/",
       title: t("mella"),
       service: t("both"),
       year: t("mella-yr"),
@@ -64,6 +65,7 @@ const ProjectDataForIndividualWork = () => {
       id: "02",
 
       title: t("grace"),
+      src: "https://biebsm-org.vercel.app/",
       service: t("both"),
       year: t("grace-yr"),
       location: t("grace-loc"),
@@ -84,6 +86,7 @@ const ProjectDataForIndividualWork = () => {
     {
       id: "03",
       title: t("knudsen"),
+      src: "https://tanyasite.netlify.app/",
       service: t("both"),
       year: t("tanya-yr"),
       location: t("tanya-loc"),
@@ -104,6 +107,7 @@ const ProjectDataForIndividualWork = () => {
     {
       id: "04",
       title: t("constantin"),
+      src: "https://constantinefoundation.org/",
       service: t("dev"),
       year: t("constantin-yr"),
       location: t("constantin-loc"),
@@ -124,6 +128,7 @@ const ProjectDataForIndividualWork = () => {
     {
       id: "05",
       title: t("yt"),
+      src: "https://yt--youtbe-clone-xjkdsdfs.netlify.app/",
       service: t("dev"),
       year: "2022",
       location: "Kenya",

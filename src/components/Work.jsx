@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Page from "./Page";
 import Footer from "../components/Footer";
 import Button from "./Button";
@@ -22,18 +22,23 @@ const Work = ({ projects, id }) => {
       {/* ****************************************************** */}
 
       <div className="max-w-[80%] mx-auto mb-10 pt-[8rem] md:pt-[12rem] min-h-[70vh] capitalize overflow-hidden">
-        <div className="flex space-x-3">
-          <p className="druk">{filteredProject.id}</p>
-          <h1
-            className="druk leading-tight pt-0"
-            style={{
-              // fontSize: "clamp(3.25em, 3vw, 4em)",
-              fontSize: "clamp(2.5em, 6vw, 4em)",
-              lineHeight: 1,
-            }}
-          >
-            {filteredProject.title}
-          </h1>
+        <div className="flex flex-col md:flex-row space-y-3 justify-center items-between  md:space-x-3 md:justify-between md:items-center">
+          <div>
+            <p className="druk">{filteredProject.id}</p>
+            <h1
+              className="druk leading-tight pt-0"
+              style={{
+                // fontSize: "clamp(3.25em, 3vw, 4em)",
+                fontSize: "clamp(2.5em, 6vw, 4em)",
+                lineHeight: 1,
+              }}
+            >
+              {filteredProject.title}
+            </h1>
+          </div>
+          <Link to={filteredProject.src}>
+            <Button text={t("visit")} path="" />
+          </Link>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between gap-y-10 mt-10">
@@ -112,7 +117,7 @@ const Work = ({ projects, id }) => {
 
       {/* ****************************************************** */}
 
-      <div className="max-w-[80%] mb-[2.5rem] md:mb-[5rem] mx-auto flex justify-end">
+      <div className="max-w-[80%] mb-[2.5rem] md:mb-[5rem] mt-[3em] md:mt-[5em] mx-auto flex justify-end">
         {id < projects.length && (
           <Button
             text={t("next-project")}
@@ -120,10 +125,12 @@ const Work = ({ projects, id }) => {
           />
         )}
         {id >= projects.length && (
-          <Button
-            text={t("prev-project")}
-            path={`/projects/0${parseInt(filteredProject.id) - 1}`}
-          />
+          <div className="">
+            <Button
+              text={t("prev-project")}
+              path={`/projects/0${parseInt(filteredProject.id) - 1}`}
+            />
+          </div>
         )}
       </div>
       <Footer />
