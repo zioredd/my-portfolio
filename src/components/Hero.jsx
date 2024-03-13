@@ -19,7 +19,7 @@ const Hero = () => {
               className="druk font-600 capitalize text-[15vw] text-center text-[#B0A47F]"
               style={{
                 fontSize: "clamp(5em, 9vw, 40em)",
-                lineHeight: 0.8,
+                lineHeight: 1,
                 letterSpacing: "8px",
               }}
             >
