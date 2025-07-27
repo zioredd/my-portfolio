@@ -11,13 +11,12 @@ function Navbar({ changeLang, location }) {
   const [open, setOpen] = useState(false);
   const history = useNavigate();
   const t = React.useContext(TranslationContext);
-  const [activeLinks, setActiveLinks] = useState(Array(3).fill(false));
+  const [activeLinks] = useState(Array(3).fill(false));
   const linkLabels = [
     { label: t("work-nav"), src: "/projects" },
     { label: t("about-nav"), src: "/about" },
     { label: t("contact-nav"), src: "/contact" },
   ];
-  const [activeNavItem, setActiveNavItem] = useState(0);
 
   const footerLinks = [
     {
@@ -68,7 +67,7 @@ function Navbar({ changeLang, location }) {
   };
 
   return (
-    <div className="fixed top-0 w-full flex z-[1000] bg-white">
+    <div className="fixed top-0 w-full flex z-[1000] bg-[#F3F1EB]">
       <header>
         <div className="flex  justify-between  w-full px-2 md:px-10 py-1">
           <div className=" justify-center items-center text-[16px] font-[100] hidden md:flex">
@@ -76,7 +75,7 @@ function Navbar({ changeLang, location }) {
               <div className={`${styles.logo} font-bold`}>
                 <p className={styles.copyright}>©</p>
                 <div className={styles.name}>
-                  <p className={styles.codeBy}>Code by</p>
+                  <p className={styles.codBy}>Code by</p>
                   <p className={styles.dennis}>Zior</p>
                   <p className={styles.snellenberg}>Ezedin</p>
                 </div>

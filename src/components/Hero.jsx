@@ -1,41 +1,23 @@
 "use client";
 import { TranslationContext } from "../App";
-import codingbg from "../assets/images/coding-bg.jpg";
 import React from "react";
-import Navbar from "./NavigationBar/Navbar";
+import Button from "./Button";
 
 const Hero = () => {
   const t = React.useContext(TranslationContext);
 
   return (
     <>
-      {/* <div className="bg-[#B0A47F] absolute top-0 w-full left-0 z-[1000]">
-        <Navbar />
-      </div> */}
-      <div className="h-screen relative overflow-hidden ">
-        <div className="absolute inset-0 flex justify-center items-center">
-          <div className=" min-w-1/2 header z-[10]  flex items-center ">
-            <h1
-              className="druk font-600 capitalize text-[15vw] text-center text-[#B0A47F]"
-              style={{
-                fontSize: "clamp(5em, 9vw, 40em)",
-                lineHeight: 1,
-                letterSpacing: "8px",
-              }}
-            >
-              {t("zior")} <br /> {t("ezedin")}
-            </h1>
-          </div>
-        </div>
-        <div
-          className="absolute inset-0 bg-cover bg-center clip-container"
-          style={{
-            backgroundImage: `url(${codingbg})`,
-          }}
-        ></div>
-        <div className="flex flex-col absolute inset-0 justify-end items-center space-y-2">
-          <p className="text-[#324744]">{t("scroll")}</p>
-          <div className="w-px h-12 bg-[#00211B]"></div>
+      <div className="flex flex-col px-4  py-8 m-[2em]  md:m-[4rem]  space-y-8 md:space-y-10 min-h-[calc(100vh-72px)] justify-center">
+        <h1 className="helvetica-neue text-[clamp(1.3em,6vw,2.5em)] md:text-[clamp(2em,4vw,4em)] max-w-full md:max-w-4xl tracking-normal leading-[1.2] text-[#00211B]">
+          {t("who")}
+        </h1>
+        <p className="max-w-full md:max-w-[40%] text-[#00211B] font-sans text-[1em] md:text-[1.3em] tracking-normal leading-6 md:leading-7 font-normal">
+          {t("who_description")}
+        </p>
+        <div className="flex gap-2">
+          <Button text={t("see-works")} path="projects" />
+          <Button text={t("download-cv")} path="download-cv" />
         </div>
       </div>
     </>

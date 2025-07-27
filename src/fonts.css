@@ -22,3 +22,13 @@
   font-family: "Creattion Demo";
   src: url("../public/Creattion Demo.otf") format("truetype");
 }
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../public/HelveticaNeueLTProBdEx.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: url("../public/HelveticaNeueLTProIt.otf") format("truetype");
+}

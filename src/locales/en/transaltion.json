@@ -29,7 +29,7 @@
     "mella":"mella marketing",
     "yt":"YouTube clone",
     "about":"About",
-    "aboutp":"I'm a freelance Web developer and began my career in UX/UI design and front-end development in 2018. I later transitioned into the development field, driven by a passion for coding.",
+    "aboutp":"I'm a full-stack developer who loves turning ideas into scalable, performant, and user-friendly web applications. With expertise in both frontend and backend technologies, I enjoy solving complex problems and delivering clean, maintainable code. Whether it's designing sleek UIs or architecting robust APIs, I’m all about building great software that makes a difference.",
     "help":"i can help you with...",
     "design":"Design",
     "designp": "Drawing on my extensive experience in creating websites and applications, I deliver robust and intuitive designs. Establishing a strong corporate identity is crucial for the success of any website.",
@@ -69,7 +69,7 @@
     "contact-nav" : "Contact",
     "socials" : "Socials",
     "contact-detail" : "Contact Detail",
-    "html" : "HTML CSS",
+    "html" : "HTML5, CSS3 (Flexbox, Grid, Animations)",
     "js" : "javascript",
     "react" : "react",
     "tailwind" : "tailwind",
@@ -79,7 +79,10 @@
     "webdes" : "website design",
     "pm" : "project management",
     "cd" : "concept development",
-    "who" : " Hi, I'm zior a UI/UX web designer and developer from ethiopia.",
+    "who" : "Hi, I'm a freelance full-stack developer based in Ethiopia.",
+    "who_description": " I help small to medium businesses from all over the world with tailor-made solutions. With each project, I push my work to new horizon, always putting quality first.",
+    "see-works": "See my works",
+    "download-cv": "Download CV",
     "sm" : "see more",
     "context" : "context & brief /",
     "responsive" : "responsive /",
@@ -89,6 +92,7 @@
     "gracedtl" : "I have built a designed and built a website for Berea whic is a movement of believers working together to change their nations through a network of volunteer Tent Makers, mission oriented saints, national gatherings, training events and resources.",
     "constantindtl" : "I have provided website to design  to Constantin Foundation, an organization which focus on Algacultures, handicrafts such as carpentry and other crafts, education, healthcare, and economic empowerment to address challenges faced by African communities.",
     "ytdtl" : " i have built a youtube clone with many of the functionalities of the original youtube platform for my own experience.",
+    "aladiadtl" : "I have participated in the backend development of Aladia, an e-learning platform where individuals and organizations—both educational and non-educational—can create, sell, and deliver courses, as well as train their employees using internal content or content from other creators. Through a public marketplace, users can access a wide range of courses and build custom training paths tailored to their teams’ needs",
     "role" : "Role",
     "loc" : "location",
     "yeargen" : "year",
@@ -96,7 +100,9 @@
     "see-website" : "See Website",
     "next-project" : "Next Case",
     "prev-project" : "See Previous Project",
-    "visit" : "Visit the Website"
+    "visit" : "Visit the Website",
+    "aladia": "Aladia",
+    "back": "Backend Development"
 }
 
 

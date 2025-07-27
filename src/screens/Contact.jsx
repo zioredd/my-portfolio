@@ -113,8 +113,8 @@ const Contact = () => {
       <Page title={t("contact-nav")} />
       <ToastContainer />
 
-      <div className="flex flex-col md:flex-row max-w-[80%] mx-auto absolute inset-0 justify-between items-center">
-        <div className="mt-[4em] md:mt-[7em] space-y-5">
+      <div className="flex flex-col md:flex-row px-40 mx-auto absolute inset-0 justify-between items-center bg-[#F3F1EB]">
+        <div className="mt-[2em] md:mt-[7em] space-y-5 bg-[#F3F1EB]">
           <div className="w-[70px] h-[70px] rounded-full bg-white mx-auto translate-y-1/2 flex justify-center items-center">
             <div className="w-[60px] h-[60px] rounded-full bg-[#00211B] opacity-50 flex justify-center items-center">
               <img src={speectBubble} className="w-[24px] h-auto text-white" />
@@ -129,14 +129,10 @@ const Contact = () => {
             </h1>
           </div>
         </div>
-        <div
-          className="max-h-screen mt-[5%] md:mt-[40%] lg:mt-[30%]"
-          id="brown"
-        >
-          <div className="max-w-[95%] md:max-w-[80%] mx-auto   md:mx-0 md:ml-auto space-y-20  pb-10">
+        <div className="max-h-screen mt-10 md:mt-[40%] lg:mt-[10%]" id="brown">
+          <div className="max-w-full md:max-w-[100%] mx-auto md:mx-0 md:ml-auto space-y-20 pb-10">
             <form ref={form} onSubmit={sendEmail}>
               <section className="space-y-6">
-                <p className="text-[1.2em] text-start">{t("letme")}</p>
                 <div className="md:flex relative gap-6 space-y-4 md:space-y-0">
                   <div className="flex-grow">
                     <label
@@ -205,66 +201,24 @@ const Contact = () => {
                 </div>
                 <div>
                   <label
-                    htmlFor="phone"
+                    htmlFor="message"
                     className="text-[14px] text-[#B0A47F] capitalize"
                   >
-                    {t("phone")}
+                    {t("message")}
                   </label>
-                  <input
-                    id="phone"
+                  <textarea
+                    id="message"
                     type="text"
-                    name="from_phone"
-                    value={formData.from_phone}
-                    className="w-full px-4 py-4 border border-gray-300 focus:outline-none focus:shadow-b-md text-[#120e0e] font-[400]"
-                    placeholder={t("phone")}
+                    name="message"
+                    value={formData.message}
+                    className="w-full h-[10em] px-4 py-4 border border-gray-300 focus:outline-none focus:shadow-b-md text-[#120e0e] font-[400]"
+                    placeholder={t("hey")}
                     onChange={handleChange}
                   />
+                  {errors.message && (
+                    <span style={styles.errormessage}>{errors.message}</span>
+                  )}{" "}
                 </div>
-                <section className="space-y-6">
-                  <p className="text-[1.2em]  text-start">{t("tellmemore")}</p>
-                  <div>
-                    <label
-                      htmlFor="timeline"
-                      className="text-[14px] text-[#B0A47F] capitalize"
-                    >
-                      {t("timeline")}
-                    </label>
-                    <input
-                      id="timeline"
-                      type="text"
-                      name="from_timeline"
-                      value={formData.from_timeline}
-                      className="w-full px-4 py-4 border border-gray-300 focus:outline-none focus:shadow-b-md text-[#120e0e] font-[400]"
-                      placeholder={t("timeline")}
-                      onChange={handleChange}
-                    />
-                    {errors.from_timeline && (
-                      <span style={styles.errormessage}>
-                        {errors.from_timeline}
-                      </span>
-                    )}{" "}
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="text-[14px] text-[#B0A47F] capitalize"
-                    >
-                      {t("message")}
-                    </label>
-                    <textarea
-                      id="message"
-                      type="text"
-                      name="message"
-                      value={formData.message}
-                      className="w-full h-[10em] px-4 py-4 border border-gray-300 focus:outline-none focus:shadow-b-md text-[#120e0e] font-[400]"
-                      placeholder={t("hey")}
-                      onChange={handleChange}
-                    />
-                    {errors.message && (
-                      <span style={styles.errormessage}>{errors.message}</span>
-                    )}{" "}
-                  </div>
-                </section>
                 <div className="mt-6 space-y-6">
                   <p className="">{t("promise")}</p>
                   <div className="mt-6">

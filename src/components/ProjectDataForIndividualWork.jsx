@@ -20,6 +20,10 @@ import ytHome from "../assets/yt/ytHome.png";
 import ytDesk from "../assets/yt/ytDesk.jpeg";
 import ytIphone1 from "../assets/yt/ytIphone1.jpeg";
 import ytIphone2 from "../assets/yt/ytIphone2.jpeg";
+import aladiaMain from "../assets/aladia/aladiaMain.png";
+import aladiaIphone1 from "../assets/aladia/aladiaIphone1.png";
+import aladiaIphone2 from "../assets/aladia/aladiaIphone2.png";
+import aladiaDesk from "../assets/aladia/aladiaDesk.png";
 import { TranslationContext } from "../App";
 import Work from "./Work";
 import { useParams } from "react-router-dom";
@@ -139,6 +143,27 @@ const ProjectDataForIndividualWork = () => {
       context: {
         title: t("context"),
         detail: t("ytdtl"),
+      },
+
+      responsive: {
+        title: t("responsive"),
+        detail: t("res"),
+      },
+    },
+    {
+      id: "06",
+      title: t("aladia"),
+      src: "https://aladia.io/",
+      service: t("back"),
+      year: "2025",
+      location: "Italy",
+      img1: aladiaMain,
+      img2: aladiaDesk,
+      img3: aladiaIphone1,
+      img4: aladiaIphone2,
+      context: {
+        title: t("context"),
+        detail: t("aladiadtl"),
       },
 
       responsive: {

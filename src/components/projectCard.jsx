@@ -20,9 +20,9 @@ const Card = ({ id, title, image }) => {
             className="w-full h-full transition-transform duration-700 transform-gpu hover:scale-110 hover:opacity-[90%]"
           />
         </div>
-        <div className="py-6 text-center bg-[#00211B] flex flex-col justify-center items-center">
+        <div className="py-6 text-center bg-[#B0A47F] flex flex-col justify-center items-center">
           <h1
-            className="text-[#B0A47F]"
+            className="text-[#00211B]"
             style={{ fontSize: "clamp(1.75em, 2.3vw, 2.5em)" }}
           >
             {title}

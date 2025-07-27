@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       <Page title={t("about")} />
-      <div className="absolute top-20 text-[#1f2622] pt-[3em] md:pt-[5em]">
+      <div className="absolute top-20 text-[#1f2622] pt-[3em] md:pt-[5em] bg-[#F3F1EB]">
         <div className="mb-[7em] md:mb-[10em]">
           <div className="max-w-[66.5%] mx-auto ">
             <h1

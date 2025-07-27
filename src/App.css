@@ -82,6 +82,14 @@ body {
   font-family: "Creattion Demo";
 }
 
+.helvetica-neue {
+  font-family: "Helvetica Neue";
+}
+
+.helvetica-neue-light {
+  font-family: "Helvetica Neue Light";
+}
+
 .hover-zoom:hover {
   transform: scale(1.05);
 }

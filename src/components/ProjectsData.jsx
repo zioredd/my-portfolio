@@ -1,5 +1,4 @@
 import React from "react";
-import constantinLogo from "../assets/brandLogos/ConstantinLogo.svg";
 import mellaHome from "../assets/mella/mellaHome.png";
 import mellaTwo from "../assets/mella/mella2.jpeg";
 import mellaMobile1 from "../assets/mella/mobile.jpeg";
@@ -20,6 +19,10 @@ import ytHome from "../assets/yt/ytHome.png";
 import ytDesk from "../assets/yt/ytDesk.jpeg";
 import ytIphone1 from "../assets/yt/ytIphone1.jpeg";
 import ytIphone2 from "../assets/yt/ytIphone2.jpeg";
+import aladiaHome from "../assets/aladia/aladiaMain.png";
+import aladiaIphone1 from "../assets/aladia/aladiaIphone1.png";
+import aladiaIphone2 from "../assets/aladia/aladiaIphone2.png";
+import aladiaDesk from "../assets/aladia/aladiaDesk.png";
 import Project from "../screens/Works";
 import { TranslationContext } from "../App";
 
@@ -33,17 +36,17 @@ const ProjectsData = () => {
   const projects = [
     {
       id: "01",
-      title: t("mella"),
-      service: t("both"),
-      year: t("mella-yr"),
-      location: t("mella-loc"),
-      img1: mellaHome,
-      img2: mellaTwo,
-      img3: mellaMobile1,
-      img4: mellaContact,
+      title: t("yt"),
+      service: t("dev"),
+      year: "2022",
+      location: "Kenya",
+      img1: ytHome,
+      img2: ytDesk,
+      img3: ytIphone2,
+      img4: ytIphone1,
       context: {
         title: t("context"),
-        detail: t("melladtl"),
+        detail: t("ytdtl"),
       },
 
       responsive: {
@@ -114,14 +117,34 @@ const ProjectsData = () => {
     },
     {
       id: "05",
-      title: t("yt"),
+      title: t("mella"),
+      service: t("both"),
+      year: t("mella-yr"),
+      location: t("mella-loc"),
+      img1: mellaHome,
+      img2: mellaTwo,
+      img3: mellaMobile1,
+      img4: mellaContact,
+      context: {
+        title: t("context"),
+        detail: t("melladtl"),
+      },
+
+      responsive: {
+        title: t("responsive"),
+        detail: t("res"),
+      },
+    },
+    {
+      id: "06",
+      title: t("aladia"),
       service: t("dev"),
-      year: "2022",
-      location: "Kenya",
-      img1: ytHome,
-      img2: ytDesk,
-      img3: ytIphone2,
-      img4: ytIphone1,
+      year: "2025",
+      location: "Italy(Remote)",
+      img1: aladiaHome,
+      img2: aladiaDesk,
+      img3: aladiaIphone1,
+      img4: aladiaIphone2,
       context: {
         title: t("context"),
         detail: t("ytdtl"),

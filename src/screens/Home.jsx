@@ -15,10 +15,10 @@ const Home = () => {
   return (
     <>
       <TranslationContext.Provider value={t}>
-        <div className="absolute top-0 bg-[#F3F1EB]">
+        <div className="bg-[#F3F1EB]">
           <Page title={t("home-nav")} />
           <Hero />
-          <WhoWeAre />
+          {/* <WhoWeAre /> */}
           <Skills />
           <Clients />
           <Projects />

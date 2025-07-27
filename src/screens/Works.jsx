@@ -3,7 +3,6 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 import Page from "../components/Page";
 import { TranslationContext } from "../App";
-import Button from "../components/Button";
 
 const Project = ({ projects }) => {
   const t = React.useContext(TranslationContext);
@@ -29,7 +28,7 @@ const Project = ({ projects }) => {
     <>
       <Page title={t("work-nav")} />
 
-      <div className="bg-[#E9EAEB]">
+      <div className="bg-[#F3F1EB] pb-20 md:pb-40">
         <div className="max-w-[80%] mx-auto mb-20 sm:pt-[8rem] md:pt-[10rem] lg:pt-[11rem] pt-[8em] ">
           <h1
             className=" leading-tight antonia text-[#00211B]"
@@ -38,16 +37,17 @@ const Project = ({ projects }) => {
             {t("worksheader")}
           </h1>
         </div>
-        <div className="max-w-[72%] mx-auto justify-between mt-20 hidden lg:flex">
+        <div className="max-w-[80%] mx-auto justify-between mt-20 hidden lg:flex">
           <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
             {t("client")}
           </p>
           <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
             {t("location")}
           </p>
-          <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
+          {/* <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
             {t("service")}
-          </p>
+          </p> */}
+
           <p className="text-[0.6em] text-[#00211B] font-bold uppercase">
             {t("year")}
           </p>
@@ -61,23 +61,23 @@ const Project = ({ projects }) => {
               : "grid sm:grid-cols-2 gap-y-20 max-w-[90%] mx-auto gap-x-6"
           }
         >
-          {projects.map((project, i) => {
+          {[...projects].reverse().map((project, i) => {
             return (
               <Card
                 key={i}
                 id={project.id}
                 img={project.img1}
                 title={project.title}
-                service={project.service}
                 year={project.year}
                 location={project.location}
+                src={project.src}
               />
             );
           })}
         </div>
-        <div className="flex justify-center items-center pb-[5rem] md:pb-[10rem] mt-[5em]">
+        {/* <div className="flex justify-center items-center pb-[5rem] md:pb-[10rem] mt-[5em]">
           <Button path="/archieve" text={t("archieve")} />
-        </div>
+        </div> */}
       </div>
       <Footer />
     </>
